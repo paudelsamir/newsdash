@@ -1,0 +1,20 @@
+module components
+Card 1.0 Card.qml
+Chip 1.0 Chip.qml
+IconButton 1.0 IconButton.qml
+SectionHeader 1.0 SectionHeader.qml
+ArticleRow 1.0 ArticleRow.qml
+NavBar 1.0 NavBar.qml
+SearchField 1.0 SearchField.qml
+SettingRow 1.0 SettingRow.qml
+Hairline 1.0 Hairline.qml
+EmptyState 1.0 EmptyState.qml
+PillButton 1.0 PillButton.qml
+ToggleSwitch 1.0 ToggleSwitch.qml
+PaletteBase 1.0 PaletteBase.qml
+ValueSlider 1.0 ValueSlider.qml
+SegmentedSlider 1.0 SegmentedSlider.qml
+SubHeader 1.0 SubHeader.qml
+CategorySlider 1.0 CategorySlider.qml
+ActionCluster 1.0 ActionCluster.qml
+FilterRail 1.0 FilterRail.qml

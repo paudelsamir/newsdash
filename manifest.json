@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "paudelsamir.newsdash",
+  "name": "News Dashboard",
+  "version": "2.0.0",
+  "author": "local",
+  "license": "MIT",
+  "description": "A unified Omarchy news reader: RSS and Atom feeds in one premium panel with highlights, saved stories, for-you, and full customization.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "News",
+    "description": "Unread pill in the bar; a dense, themed news panel with Home, For you, Saved and Settings.",
+    "category": "Productivity",
+    "aliases": ["news", "rss", "feeds", "headlines", "reader", "newsdash"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "showCount": "always",
+      "barVisible": "true",
+      "barTone": "adaptive",
+      "barDensity": "regular",
+      "refreshMinutes": "15",
+      "perFeed": "20",
+      "setupDone": "false"
+    },
+    "schema": [
+      {
+        "key": "showCount",
+        "type": "enum",
+        "label": "Bar badge",
+        "options": ["icon", "dot", "when-unread", "always", "foryou"],
+        "defaultValue": "always",
+        "description": "Choose an icon, unread dot, unread-only count, always-visible count, or For You count."
+      },
+      {
+        "key": "barVisible",
+        "type": "enum",
+        "label": "Show in bar",
+        "options": ["true", "false"],
+        "defaultValue": "true",
+        "description": "Show or hide the News capsule while keeping the plugin available through its shortcut."
+      },
+      {
+        "key": "barTone",
+        "type": "enum",
+        "label": "Capsule tone",
+        "options": ["adaptive", "accent", "quiet", "light"],
+        "defaultValue": "adaptive",
+        "description": "Choose how prominent the capsule looks in the bar."
+      },
+      {
+        "key": "barDensity",
+        "type": "enum",
+        "label": "Capsule density",
+        "options": ["compact", "regular"],
+        "defaultValue": "regular",
+        "description": "Choose the capsule footprint in the bar."
+      },
+      {
+        "key": "refreshMinutes",
+        "type": "enum",
+        "label": "Refresh every (minutes)",
+        "options": ["10", "15", "30", "60"],
+        "defaultValue": "15",
+        "description": "How often the feeds are fetched in the background."
+      },
+      {
+        "key": "perFeed",
+        "type": "enum",
+        "label": "Articles per source",
+        "options": ["10", "20", "30"],
+        "defaultValue": "20",
+        "description": "How many recent articles to keep from each feed."
+      },
+      {
+        "key": "setupDone",
+        "type": "enum",
+        "label": "Setup complete",
+        "options": ["true", "false"],
+        "defaultValue": "false",
+        "description": "Internal: first-run onboarding finished."
+      }
+    ]
+  }
+}
