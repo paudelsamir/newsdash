@@ -2,7 +2,12 @@
 
 A unified Omarchy / Quickshell news reader: RSS and Atom feeds in one quiet panel.
 
-![NewsDash preview](preview.png)
+```text
+ _  _               ___          _
+| \| |_____ __ ____|   \ __ _ __| |_
+| .` / -_) V  V (_-< |) / _` (_-< ' \
+|_|\_\___|\_/\_//__/___/\__,_/__/_||_|
+```
 
 ## Features
 
