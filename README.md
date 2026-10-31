@@ -84,6 +84,8 @@ Everything stays on the machine:
 
 - `~/.local/state/newsdash/state.json` - articles, read map, saved, follows, blocks, prefs
 
+The state folder is created with mode `0700` and the file with mode `0600`, so other local accounts cannot read your reading history or preferences.
+
 ## Layout
 
 ```

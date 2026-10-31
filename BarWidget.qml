@@ -145,11 +145,22 @@ BarWidget {
 
     // ---- persistence -----------------------------------------------------
 
+    // state.json holds reading history and personal feeds. mkdir -m only
+    // affects new directories, so chmod as well to fix older installs. The
+    // 0700 folder is what actually keeps other local accounts out of the file.
     Process {
         id: mkdir
-        command: ["mkdir", "-p", root.stateDir]
+        command: ["sh", "-c", "mkdir -p -- \"$1\" && chmod 700 -- \"$1\"", "sh", root.stateDir]
         running: true
     }
+
+    // Defense in depth: strip group/other bits from the file itself, both for
+    // an existing state.json and after every atomic save.
+    function hardenState() {
+        Quickshell.execDetached(["chmod", "600", root.statePath])
+    }
+
+    Component.onCompleted: root.hardenState()
 
     FileView {
         id: stateFile
@@ -160,6 +171,7 @@ BarWidget {
         onFileChanged: reload()
         onLoaded: root.applyFile(text())
         onLoadFailed: root.fileReady()
+        onSaved: root.hardenState()
     }
 
     function applyFile(text) {
