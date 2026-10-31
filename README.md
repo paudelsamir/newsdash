@@ -96,4 +96,4 @@ pages/                 Home, For you, Saved, Settings, Setup
 views/                 Sources, Personalization, Blocked, Reading, Alerts, Keyboard, Bar
 ```
 
-MIT
+MIT. See [LICENSE](LICENSE).

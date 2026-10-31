@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "id": "paudelsamir.newsdash",
   "name": "News Dashboard",
-  "version": "2.0.0",
-  "author": "local",
+  "version": "2.0.1",
+  "author": "paudelsamir",
   "license": "MIT",
-  "description": "A unified Omarchy news reader: RSS and Atom feeds in one premium panel with highlights, saved stories, for-you, and full customization.",
+  "description": "A unified Omarchy news reader: RSS and Atom feeds in one quiet panel with categories, source filters, saved stories, for-you, and full customization.",
   "kinds": ["bar-widget"],
   "entryPoints": { "barWidget": "BarWidget.qml" },
   "barWidget": {
